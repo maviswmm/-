@@ -1,15 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Title</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    div {
+      width: 1000px;
+      height: 300px;
+      border: 2px solid #000;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    ul {
+      width: 1100px;
+    }
+
+    li {
+      width: 100px;
+      height: 300px;
+      float: left;
+    }
+
+  </style>
 </head>
 <body>
-<div>
-  生于乱世，简单快乐
+
+<div id="box">
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
 </div>
-  <h1>
-  行路艰难，无所畏惧
-  </h1>
+
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery.accordion.js"></script>
+<script>
+
+  $(function () {
+    var colors = ["red","yellow","green", "cyan", "pink","hotpink", "blue", "yellowgreen","greenyellow", "skyblue"];
+
+    $("#box").accordion(colors, 20);
+
+  });
+
+
+</script>
+
 </body>
 </html>
